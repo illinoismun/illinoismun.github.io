@@ -1382,10 +1382,6 @@ select {
   margin-top: 2rem;
 }
 
-.ml-10 {
-  margin-left: 2.5rem;
-}
-
 .block {
   display: block;
 }
@@ -1478,6 +1474,10 @@ select {
   width: 18rem;
 }
 
+.w-\[100vw\] {
+  width: 100vw;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -1485,14 +1485,6 @@ select {
 
 .w-full {
   width: 100%;
-}
-
-.w-screen {
-  width: 100vw;
-}
-
-.w-\[100vw\] {
-  width: 100vw;
 }
 
 .max-w-2xl {
