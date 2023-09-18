@@ -25,3 +25,4 @@ function hideDiv() {
     document.getElementById('sidenav').classList.add('-right-80');
     document.getElementById('sidenav').classList.remove('right-0');
 }
+

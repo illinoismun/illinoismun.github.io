@@ -14,7 +14,8 @@ module.exports = {
       'serif': 'Libre Baskerville, serif',
     }
   },
-  plugins: [require('flowbite/plugin'),
+  plugins: [
+  require('flowbite/plugin'),
   require('@tailwindcss/forms'),
 ],
   
