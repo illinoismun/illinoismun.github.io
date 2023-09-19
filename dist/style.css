@@ -49,6 +49,7 @@ html {
   font-feature-settings: normal;
   /* 5 */
   font-variation-settings: normal;
+  min-height: -webkit-fill-available;
   /* 6 */
 }
 
@@ -61,6 +62,7 @@ body {
   margin: 0;
   /* 1 */
   line-height: inherit;
+  min-height: -webkit-fill-available;
   /* 2 */
 }
 
