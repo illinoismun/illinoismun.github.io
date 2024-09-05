@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | MUNI XXVI</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="dist/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="relative">
+<!-- START NAVIGATION -->
+
+        <div id="nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear" style="position: fixed;">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex items-center container">
+                    <a href="./"><img id="logo-area" src="assets/model-un-logo-outline.png" alt="logo" style="float: left;" class="w-32"></a>
+                    <div class="ml-auto sm:flex text-white font-sans hidden">
+                        <a class="ml-8 font-semibold uppercase text-sm" href="./about">About</a>
+                        <a class="ml-8 font-semibold uppercase text-sm" href="./registration">Registration</a>
+                        <a class="ml-8 font-semibold uppercase text-sm" href="./committees">Committees</a>
+                        <a class="ml-8 font-semibold uppercase text-sm" href="./schedule">Schedule</a>
+                        <a class="ml-8 font-semibold uppercase text-sm" href="./contact">Contact</a>
+                    </div>
+                    <button id="tog" class="ml-auto md:hidden text-xl text-gray1 pr-5" onclick="showDiv()">
+                        <svg stroke="#ffffff" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="3.5vh" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div> 
+        </div>
+        <div id="sidenav" class="fixed top-0 bottom-0 w-72 p-6 z-50 bg-gray-900 shadow -right-80" style="transition:all 0.5s ease">
+            <div class="flex">
+                <button class="text-xl text-gray-1 ml-auto" onclick="hideDiv()">
+                    <svg stroke="#ffffff" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="3.5vh" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col justify-center items-end font-sans h-full text-white">
+                <a class="font-semibold uppercase text-sm my-4" href="./">Home</a>
+                <a class="font-semibold uppercase text-sm my-4" href="./about">About</a>
+                <a class="font-semibold uppercase text-sm my-4" href="./registration">Registration</a>
+                <a class="font-semibold uppercase text-sm my-4" href="./committees">Committees</a>
+                <a class="font-semibold uppercase text-sm my-4" href="./schedule">Schedule</a>
+                <a class="font-semibold uppercase text-sm my-4" href="./contact">Contact</a>
+            </div>
+        </div>
+
+        <section class="relative flex h-[25vh] md:h-[40vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
+            <video class="fixed brightness-75 w-full h-full object-cover" muted autoplay loop playsinline disablepictureinpicture>
+                <source src="assets/drone-contact.mp4" type="video/mp4"/>
+            </video>
+        </section>
+<!-- END NAVIGATION -->
+
+        <section class="w-full z-20 bg-white h-full">
+            <div class="max-w-2xl px-16 md:px-0 mx-auto pb-20">
+                <h1 class="pt-24 text-3xl font-serif font-bold">Contact Us</h1>
+                <p class="text-base font-light font-sans pt-8">Do you have any questions about MUNI? Would you like to get in contact with the Illinois MUN secretariat? Fill out the form below!</p>
+                <p class="text-base font-light font-sans pt-5">If you have any questions about registration (<a class="link-main" href="mailto:registration@illinoismun.org">registration@illinoismun.org</a>), logistics (<a class="link-main" href="mailto:logistics@illinoismun.org">logistics@illinoismun.org</a>), or anything in general (<a class="link-main" href="mailto:secgen@illinoismun.org">secgen@illinoismun.org</a>), you can also contact the respective USGs.</p>
+                <script src="https://cdn02.jotfor.ms/static/prototype.forms.js?v=3.3.56541" type="text/javascript"></script>
+                <script src="https://cdn03.jotfor.ms/static/jotform.forms.js?v=3.3.56541" type="text/javascript"></script>
+                <script src="https://cdn01.jotfor.ms/js/punycode-1.4.1.min.js?v=3.3.56541" type="text/javascript" defer></script>
+                <script src="https://cdn02.jotfor.ms/js/vendor/smoothscroll.min.js?v=3.3.56541" type="text/javascript"></script>
+                <script src="https://cdn03.jotfor.ms/js/errorNavigation.js?v=3.3.56541" type="text/javascript"></script>
+                <script type="text/javascript">	JotForm.newDefaultTheme = true;
+                    JotForm.extendsNewTheme = false;
+                    JotForm.singleProduct = false;
+                    JotForm.newPaymentUIForNewCreatedForms = true;
+                    JotForm.texts = {"confirmEmail":"E-mail does not match","pleaseWait":"Please wait...","validateEmail":"You need to validate this e-mail","confirmClearForm":"Are you sure you want to clear the form","lessThan":"Your score should be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","required":"This field is required.","requireOne":"At least one field required.","requireEveryRow":"Every row is required.","requireEveryCell":"Every cell is required.","email":"Enter a valid e-mail address","alphabetic":"This field can only contain letters","numeric":"This field can only contain numeric values","alphanumeric":"This field can only contain letters and numbers.","cyrillic":"This field can only contain cyrillic characters","url":"This field can only contain a valid URL","currency":"This field can only contain currency values.","fillMask":"Field value must fill mask.","uploadExtensions":"You can only upload following files:","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","gradingScoreError":"Score total should only be less than or equal to","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","maxDigitsError":"The maximum digits allowed is","minCharactersError":"The number of characters should not be less than the minimum value:","maxCharactersError":"The number of characters should not be more than the maximum value:","freeEmailError":"Free email accounts are not allowed","minSelectionsError":"The minimum required number of selections is ","maxSelectionsError":"The maximum number of selections allowed is ","pastDatesDisallowed":"Date must not be in the past.","dateLimited":"This date is unavailable.","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","ageVerificationError":"You must be older than {minAge} years old to submit this form.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","chooseAFile_infoMessage":"Choose a file","maxFileSize_infoMessage":"Max. file size","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","ccInvalidNumber":"Credit Card Number is invalid.","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingProduct":"Please select at least one product.","ccMissingDonation":"Please enter numeric values for donation amount.","disallowDecimals":"Please enter a whole number.","restrictedDomain":"This domain is not allowed","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","requiredLegend":"All fields marked with * are required and must be filled.","geoPermissionTitle":"Permission Denied","geoPermissionDesc":"Check your browser's privacy settings.","geoNotAvailableTitle":"Position Unavailable","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoTimeoutTitle":"Timeout","geoTimeoutDesc":"Please check your internet connection and try again.","selectedTime":"Selected Time","formerSelectedTime":"Former Time","cancelAppointment":"Cancel Appointment","cancelSelection":"Cancel Selection","noSlotsAvailable":"No slots available","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","multipleError":"There are {count} errors on this page. Please correct them before moving on.","oneError":"There is {count} error on this page. Please correct it before moving on.","doneMessage":"Well done! All errors are fixed.","invalidTime":"Enter a valid time","doneButton":"Done","reviewSubmitText":"Review and Submit","nextButtonText":"Next","prevButtonText":"Previous","seeErrorsButton":"See Errors","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","soldOut":"Sold Out","justSoldOut":"Just Sold Out","selectionSoldOut":"Selection Sold Out","subProductItemsLeft":"({count} items left)","startButtonText":"START","submitButtonText":"Submit","submissionLimit":"Sorry! Only one entry is allowed. <br> Multiple submissions are disabled for this form.","reviewBackText":"Back to Form","seeAllText":"See All","progressMiddleText":"of","fieldError":"field has an error.","error":"Error"};
+                    JotForm.newPaymentUI = true;
+                    JotForm.originalLanguage = "en";
+                    JotForm.replaceTagTest = true;
+                    JotForm.clearFieldOnHide="disable";
+                    JotForm.submitError="jumpToFirstError";
+                    JotForm.isFullSource = true;
+
+                    JotForm.init(function(){
+                    /*INIT-START*/
+                if (window.JotForm && JotForm.accessible) $('input_5').setAttribute('tabindex',0);
+                if (window.JotForm && JotForm.accessible) $('input_6').setAttribute('tabindex',0);
+                    JotForm.alterTexts({"ageVerificationError":"You must be older than {minAge} years old to submit this form.","alphabetic":"This field can only contain letters","alphanumeric":"This field can only contain letters and numbers.","cancelAppointment":"Cancel Appointment","cancelSelection":"Cancel Selection","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccInvalidNumber":"Credit Card Number is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingDonation":"Please enter numeric values for donation amount.","ccMissingProduct":"Please select at least one product.","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","chooseAFile_infoMessage":"Choose a file","confirmClearForm":"Are you sure you want to clear the form","confirmEmail":"E-mail does not match","currency":"This field can only contain currency values.","cyrillic":"This field can only contain cyrillic characters","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","dateLimited":"This date is unavailable.","disallowDecimals":"Please enter a whole number.","doneButton":"Done","doneMessage":"Well done! All errors are fixed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","email":"Enter a valid e-mail address","error":"Error","fieldError":"field has an error.","fillMask":"Field value must fill mask.","formerSelectedTime":"Former Time","freeEmailError":"Free email accounts are not allowed","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoNotAvailableTitle":"Position Unavailable","geoPermissionDesc":"Check your browser's privacy settings.","geoPermissionTitle":"Permission Denied","geoTimeoutDesc":"Please check your internet connection and try again.","geoTimeoutTitle":"Timeout","gradingScoreError":"Score total should only be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","invalidTime":"Enter a valid time","justSoldOut":"Just Sold Out","lessThan":"Your score should be less than or equal to","maxCharactersError":"The number of characters should not be more than the maximum value:","maxDigitsError":"The maximum digits allowed is","maxFileSize_infoMessage":"Max. file size","maxSelectionsError":"The maximum number of selections allowed is ","minCharactersError":"The number of characters should not be less than the minimum value:","minSelectionsError":"The minimum required number of selections is ","multipleError":"There are {count} errors on this page. Please correct them before moving on.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","nextButtonText":"Next","noSlotsAvailable":"No slots available","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","numeric":"This field can only contain numeric values","oneError":"There is {count} error on this page. Please correct it before moving on.","pastDatesDisallowed":"Date must not be in the past.","pleaseWait":"Please wait...","prevButtonText":"Previous","progressMiddleText":"of","required":"This field is required.","requiredLegend":"All fields marked with * are required and must be filled.","requireEveryCell":"Every cell is required.","requireEveryRow":"Every row is required.","requireOne":"At least one field required.","restrictedDomain":"This domain is not allowed","reviewBackText":"Back to Form","reviewSubmitText":"Review and Submit","seeAllText":"See All","seeErrorsButton":"See Errors","selectedTime":"Selected Time","selectionSoldOut":"Selection Sold Out","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","soldOut":"Sold Out","startButtonText":"START","submissionLimit":"Sorry! Only one entry is allowed. &lt;br&gt; Multiple submissions are disabled for this form.","submitButtonText":"Submit","subProductItemsLeft":"({count} items left)","uploadExtensions":"You can only upload following files:","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","url":"This field can only contain a valid URL","validateEmail":"You need to validate this e-mail","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is"});
+                    /*INIT-END*/
+                    });
+
+                setTimeout(function() {
+                JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"MUNI XXVII Contact","type":"control_head"},{"name":"submit2","qid":"2","text":"Submit","type":"control_button"},{"description":"","name":"name","qid":"3","text":"Name","type":"control_fullname"},{"description":"","name":"email","qid":"4","subLabel":"example@example.com","text":"Email","type":"control_email"},{"description":"","name":"subject","qid":"5","subLabel":"","text":"Subject","type":"control_textbox"},{"description":"","mde":"No","name":"message","qid":"6","subLabel":"","text":"Message","type":"control_textarea","wysiwyg":"Disable"}]);}, 20); 
+                </script>
+                <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/stylebuilder/static/form-common.css?v=de56e2d
+                "/>
+                <style type="text/css">@media print{*{-webkit-print-color-adjust: exact !important;color-adjust: exact !important;}.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+                <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.56541"/>
+                <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_styles.css?3.3.56541" />
+                <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.56541" />
+                <form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://submit.jotform.com/submit/242467043820049" method="post" name="form_242467043820049" id="242467043820049" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="242467043820049" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" /><input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1725406450495" /><input type="hidden" id="submitSource" name="submitSource" value="unknown" /><input type="hidden" id="buildDate" name="buildDate" value="1725406450495" />
+                <div role="main" class="form-all">
+                    <ul class="form-section page-section">
+                    <li id="cid_1" class="form-input-wide" data-type="control_head">
+                        <div class="form-header-group  header-large">
+                        <div class="header-text httal htvam">
+                            <h1 id="header_1" class="form-header" data-component="header">MUNI XXVII Contact</h1>
+                        </div>
+                        </div>
+                    </li>
+                    <li class="form-line jf-required" data-type="control_fullname" id="id_3"><label class="form-label form-label-top form-label-auto" id="label_3" for="first_3" aria-hidden="false"> Name<span class="form-required">*</span> </label>
+                        <div id="cid_3" class="form-input-wide jf-required" data-layout="full">
+                        <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_3" name="q3_name[first]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_3 given-name" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" required="" value="" /><label class="form-sub-label" for="first_3" id="sublabel_3_first" style="min-height:13px">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_3" name="q3_name[last]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_3 family-name" size="15" data-component="last" aria-labelledby="label_3 sublabel_3_last" required="" value="" /><label class="form-sub-label" for="last_3" id="sublabel_3_last" style="min-height:13px">Last Name</label></span></div>
+                        </div>
+                    </li>
+                    <li class="form-line jf-required" data-type="control_email" id="id_4"><label class="form-label form-label-top form-label-auto" id="label_4" for="input_4" aria-hidden="false"> Email<span class="form-required">*</span> </label>
+                        <div id="cid_4" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_4" name="q4_email" class="form-textbox validate[required, Email]" data-defaultvalue="" autoComplete="section-input_4 email" style="width:310px" size="310" data-component="email" aria-labelledby="label_4 sublabel_input_4" required="" value="" /><label class="form-sub-label" for="input_4" id="sublabel_input_4" style="min-height:13px">example@example.com</label></span> </div>
+                    </li>
+                    <li class="form-line jf-required" data-type="control_textbox" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Subject<span class="form-required">*</span> </label>
+                        <div id="cid_5" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_5" name="q5_subject" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_5" required="" value="" /> </div>
+                    </li>
+                    <li class="form-line jf-required" data-type="control_textarea" id="id_6"><label class="form-label form-label-top form-label-auto" id="label_6" for="input_6" aria-hidden="false"> Message<span class="form-required">*</span> </label>
+                        <div id="cid_6" class="form-input-wide jf-required" data-layout="full"> <textarea id="input_6" class="form-textarea validate[required]" name="q6_message" style="width:648px;height:163px" data-component="textarea" required="" aria-labelledby="label_6"></textarea> </div>
+                    </li>
+                    <li class="form-line" data-type="control_button" id="id_2">
+                        <div id="cid_2" class="form-input-wide" data-layout="full">
+                        <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_2" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Submit</button></div>
+                        </div>
+                    </li>
+                    <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
+                    </ul>
+                </div>
+                <script>
+                    JotForm.showJotFormPowered = "0";
+                </script>
+                <script>
+                    JotForm.poweredByText = "Powered by Jotform";
+                </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="242467043820049" />
+                <script type="text/javascript">
+                    var all_spc = document.querySelectorAll("form[id='242467043820049'] .si" + "mple" + "_spc");
+                    for (var i = 0; i < all_spc.length; i++)
+                    {
+                    all_spc[i].value = "242467043820049-242467043820049";
+                    }
+                </script>
+                </form><script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.isNewSACL=true;</script>
+            </div>
+        </section>
+    
+
+<!-- START FOOTER -->
+<footer class="bg-gray-900">
+    <div class="mx-auto w-full max-w-5xl p-4 px-12 md:px-0 py-6 md:py-16">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+              <a href="./" class="flex items-center">
+                  <img src="assets/model-un-logo-white.png" class="h-8 mr-3" />
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap font-serif text-white">MUNI XXVII</span>
+              </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6">
+            <div>
+                <h2 class="mb-6 text-sm font-semibold uppercase text-white">Resources</h2>
+                <ul class="text-gray-400 font-medium">
+                  <li class="mb-4">
+                      <a href="./about" class="link-foot">About</a>
+                  </li>
+                  <li>
+                      <a href="./registration" class="link-foot">Registration</a>
+                  </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact us</h2>
+                <ul class="text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="mailto:secgen@illinoismun.org" class="link-foot ">Sec-Gen</a>
+                    </li>
+                    <li>
+                        <a href="mailto:logistics@illinoismun.org" class="link-foot">Logistics</a>
+                    </li>
+                </ul>
+            </div>
+              
+          </div>
+      </div>
+      <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm  sm:text-center text-gray-400">© 2024 <a href="./" class="link-foot">Illinois MUN</a>. All Rights Reserved.
+          </span>
+          <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+              <a href="mailto:secgen@illinoismun.org" target="_blank" class="text-gray-500 hover:text-white">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/uiucmun/"  target="_blank" class="text-gray-500 hover:text-white">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                </svg>
+              </a>
+              
+          </div>
+      </div>
+    </div>
+</footer>
+<!-- END FOOTER -->
+    </div>
+    <script src="//embed.typeform.com/next/embed.js"></script>
+</body>
+</html>
