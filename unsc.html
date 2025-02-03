@@ -2,23 +2,9 @@
 <html lang="en">
 
 <head>
-    <style>
-        .body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .center {
-            text-align: center;
-        }
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | MUNI XXVII</title>
+    <title>Committees | MUNI XXVII</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -38,8 +24,8 @@
 </head>
 
 <body>
-
     <div class="relative">
+        <!-- START NAVIGATION -->
 
         <div id="nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear" style="position: fixed;">
             <div class="max-w-6xl mx-auto px-6">
@@ -84,121 +70,89 @@
                 <a class="font-semibold uppercase text-sm my-4" href="./contact">Contact</a>
             </div>
         </div>
-
+        <!-- END NAVIGATION -->
         <section
-            class="relative flex h-[25vh] md:h-[40vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
-            <img class="fixed brightness-50 w-full  object-cover" src="assets/muni-sec.jpg"></img>
-            <!--<h1 class="fixed text-4xl sm:text-5xl font-bold mt-20">About</h1>-->
+            class="relative flex min-h-screen h-[100vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
+            <video class="fixed brightness-75 w-full h-full object-cover" muted autoplay loop playsinline
+                disablepictureinpicture>
+                <source src="assets/unescap-vid.mp4" type="video/mp4" />
+            </video>
+            <h1 class="fixed max-w-5xl text-5xl sm:text-6xl font-bold text-center leading-tight md:leading-snug">United
+                Nations Security Council</h1>
+
+
+            <svg fill="#ffffff" class="z-10 fixed animate-bounce bottom-10" height="5vh" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
+                xml:space="preserve">
+                <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
+            </svg>
         </section>
         <section class="w-full z-20 bg-white h-full">
-            <div class="max-w-4xl px-16 md:px-0 mx-auto ">
-                <h1 class="pt-24 text-5xl sm:text-6xl font-serif font-bold center">We are Illinois MUN.</h1>
-                <!-- <img src="assets/mun-logo-white.png" class="center md:w-72 float-none md:float-left mb-8 md:mb-0"> -->
+            <div class="max-w-3xl px-16 md:px-0 mx-auto pb-20">
+                <div class="pt-12"></div>
+                <a class="group/edit flex items-center" href="committees.html">
+                    <svg fill="#000000" class="group-hover/edit:-translate-x-1.5 transition ease-in-out duration-200"
+                        height="1.5em" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M220,128a4.0002,4.0002,0,0,1-4,4H49.65674l65.17138,65.17187a3.99957,3.99957,0,1,1-5.65625,5.65625l-72-72a3.99854,3.99854,0,0,1,0-5.65625l72-72a3.99957,3.99957,0,0,1,5.65625,5.65625L49.65674,124H216A4.0002,4.0002,0,0,1,220,128Z" />
+                    </svg>
+                    <span class="ml-2 text-sm font-light uppercase">Committees</span>
+                </a>
+                <h1 class="pt-20 text-3xl font-serif font-bold">About</h1>
+                <p class="text-base font-light font-sans pt-8">It is August 29th, 1949, and the military spy planes from
+                    the United States have just recorded nuclear fallout over the Soviet Union, indicative of the first
+                    nuclear fission test outside the US. A new weapons arms race has begun, and to respond, an emergency
+                    session of the United Nations Security Council has been called. You will be tasked with preventing
+                    nuclear war and halting weapons development as you take part in this historical hybrid committee.
+                </p>
+                <p class="text-base font-light font-sans pt-5"><span class="font-bold font-serif">Type:</span> Hybrid</p>
+                <p class="text-base font-light font-sans pt-5"><span class="font-bold font-serif">Size:</span> 10-15
+                    delegates</p>
+                <p class="text-base font-light font-sans pt-5"><span class="font-bold font-serif">Experience:</span>
+                    Intermediate -> Advanced</p>
+                <p class="text-base font-light font-sans pt-5"><span class="font-bold font-serif">Room:</span> TBA</p>
+                <h1 class="pt-20 text-3xl font-serif font-bold">Topic</h1>
+                <p class="text-base font-light font-sans pt-5"><span class="font-bold font-serif">Topic:</span>
+                    Addressing the development of Nuclear Weapons and Technology</p>
+                <h1 class="pt-20 text-3xl font-serif font-bold">Background Guide</h1>
+                <p class="text-base font-light font-sans pt-5"><span class="font-bold font-serif">Coming Soon</span>
+                </p>
 
-                <div class="py-16">
-                    <div class="font-serif text-3xl mb-4">Secretariat</div>
-                    <!-- <div class="font-serif text-lg mb-4 italic">To Be Announced...</div> -->
+                <!-- <div class="flex items-center justify-center text-center">
+                    <a href="https://google.com" target="_blank"><button
+                            class="mt-8 bg-transparent transition ease-in-out duration-200 hover:bg-gray-900 text-gray-900 font-semibold hover:text-white py-3.5 px-6 border border-gray-900 hover:border-transparent rounded">
+                            <a href="https://drive.google.com/file/d/1hCrVWg35OP4GuoPk1mtyt-8jF3xaFBjH/view?usp=sharing"
+                                target="_blank"><button
+                                    class="mt-8 bg-transparent transition ease-in-out duration-200 hover:bg-gray-900 text-gray-900 font-semibold hover:text-white py-3.5 px-6 border border-gray-900 hover:border-transparent rounded">
+                                    <p class="text-xs uppercase">Background Guide</p>
+                                </button></a>
+                </div> -->
 
-                    <div class="grid grid-cols-1 py-8">
-                        <!-- <img src="assets/headshots/nafisa.jpg" class="md:w-72 float-none md:float-left mb-8 md:mb-0"> -->
-                        <!-- <div class="col-span-2 md:pl-10"> -->
-                        <div class="col-span-2 ">
-                            <div class="text-3xl mb-4 uppercase font-light tracking-wide">Nafisa Khan</div>
-                            <div class="text-lg mb-4 uppercase font-light tracking-wide">Secretary General</div>
-                            <div class="text-lg mb-4 uppercase font-light tracking-wide">LAS '26
-                                | Political science
-                            </div>
-                            <div class="leading-relaxed">
-                                Hi everyone! My name is Nafisa Khan and I’m currently a sophomore majoring in
-                                Political
-                                Science and Economics from Aurora, Illinois. I’ll be graduating from the College
-                                of
-                                LAS
-                                in May 2026! Last year, I served as political officer for MUNI XXV’s UN
-                                Development
-                                Programme. This year, apart from working as your USG of Design and Merchandise
-                                for
-                                MUNI
-                                XXVI, I’m also serving on the IMUN executive board as the club secretary.
-                            </div>
-                            <div class="leading-relaxed pt-5">
-                                Outside of MUN, you can find me writing periphrastic fantasy novels, listening
-                                to
-                                kpop
-                                and bollywood music, trying new recipes, or making really detailed homework
-                                schedules
-                                that I usually abandon. I’m also involved in social science research programs
-                                here
-                                on
-                                campus, as well as the creative writing club and AAA! I can’t wait to meet all
-                                of
-                                you
-                                and show y’all the exciting merch we have in store for MUNI XXVI! See you all
-                                this
-                                April!
-                            </div>
+
+
+                <h1 class="pt-20 text-3xl font-serif font-bold">Meet Your Dais</h1>
+                <div class="grid grid-cols-1 md:grid-cols-3 py-10">
+                    <img src="assets/headshots/divij.jpg" class="md:w-64 float-none md:float-left mb-8 md:mb-0">
+                    <div class="col-span-2 md:pl-10">
+                        <div class="text-3xl mb-4 uppercase font-light tracking-wide">Divij Garg</div>
+                        <div class="text-lg mb-4 uppercase font-light tracking-wide">Director</div>
+                        <div class="leading-relaxed">
+                            Hey, my name is Divij Garg and I'm a sophomore at UIUC studying math. I've been involved
+                            with MUN since my junior year of high school, and one of my favorite memories was SIMUN, my
+                            first in-person conference. The food there was absolutely amazing as well as Hogwarts-like
+                            asthetic.
                         </div>
-                    </div>
-
-
-
-                    <div class="grid grid-cols-1  py-8">
-                        <!-- <img src="assets/headshots/divij.jpg" class="md:w-72 float-none md:float-left mb-8 md:mb-0"> -->
-                        <div class="col-span-2">
-                            <div class="text-3xl mb-4 uppercase font-light tracking-wide">Divij Garg</div>
-                            <div class="text-lg mb-4 uppercase font-light tracking-wide">USG of
-                                Rules/Regulations</div>
-                            <div class="text-lg mb-4 uppercase font-light tracking-wide">
-                                LAS
-                                '26 | CS + Math</div>
-                            <div class="leading-relaxed">
-                                Hi! My name is Divij Garg and I’m currently a junior majoring in Computer
-                                Science and Mathematics. I have been involved with Illinois MUN
-                                for the past 3 years now, serving as director of the UNDP in Spring 2023/MUNI
-                                XXV,
-                                Vice President
-                                Internal in Fall 2023, President in Spring 2024, and director of UNESCAP in
-                                Spring
-                                2024/MUNI XXVI.
-                                Alongside serving as the USG of Rules/Regulations this year, I am directing the
-                                UN
-                                Security Council, our first hybrid committee!
-                            </div>
-                            <div class="leading-relaxed pt-5">
-                                Outside of MUN, I am a part of the Illinois Space Society as part of
-                                their rocketry team helping code flight software. You can always find me doing
-                                photography on campus and driving
-                                to dark-sky parks: my favorite is astrophotography. I've also played the violin
-                                now
-                                for around 9 years and absolutely enjoy
-                                traveling and exploring new places.
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="grid grid-rows-auto sm:grid-cols-2 gap-6 mt-10">
-                        <div><img src="assets/muni1.PNG" alt="" class="h-96 w-full object-cover">
-                            <p class="pt-2 font-light italic font-sans flex items-center justify-center text-center">
-                                UN
-                                Development Programme [MUNI XXV]</p>
-                        </div>
-                        <div><img src="assets/muni4.PNG" alt="" class="h-96 w-full object-cover">
-                            <p class="pt-2 font-light italic font-sans flex items-center justify-center text-center">
-                                Director Shenanigans</p>
-                        </div>
-                        <div class="sm:col-span-2"><img src="assets/muni3.PNG" alt="" class="h-96 object-cover w-full">
-                            <p class="pt-2 font-light italic font-sans flex items-center justify-center text-center">
-                                NATO/OTAN [MUNI XXV]</p>
-                        </div>
-
                     </div>
                 </div>
+
 
             </div>
         </section>
 
+
+        <!-- START FOOTER -->
         <footer class="bg-gray-900">
             <div class="mx-auto w-full max-w-5xl p-4 px-12 md:px-0 py-6 md:py-16">
                 <div class="md:flex md:justify-between">
@@ -262,8 +216,8 @@
                 </div>
             </div>
         </footer>
+        <!-- END FOOTER -->
     </div>
-
 </body>
 
 </html>
