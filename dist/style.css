@@ -2589,3 +2589,23 @@ select {
     margin-bottom: 2rem;
   }
 }
+
+/* Hide the toggle button on larger screens */
+@media (min-width: 640px) {
+  #tog {
+      display: none;
+  }
+  #nav .sm\\:flex {
+      display: flex;
+  }
+}
+
+/* Hide the horizontal navigation on smaller screens */
+@media (max-width: 640px) {
+  #nav .sm\\:flex {
+      display: none;
+  }
+  #tog {
+      display: block;
+  }
+}
