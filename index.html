@@ -34,7 +34,9 @@
             </video>
             <h1 class="fixed text-5xl sm:text-6xl font-bold">MUNI XXVII</h1>
             <h1 class="fixed text-xl sm:text-2xl mt-24 sm:mt-28">April 18-20, 2025</h1>
-
+            <!-- <h1 id="countdown" class="fixed text-xl sm:text-2xl mt-48 sm:mt-52"></h1> -->
+            
+            
             <svg fill="#ffffff" class="z-20 fixed animate-bounce bottom-10" height="5vh" version="1.1" id="Layer_1"
                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
                 xml:space="preserve">
@@ -44,6 +46,36 @@
             </svg>
 
         </section>
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("April 18, 2025 00:00:00").getTime();
+        
+            // Update the countdown every 1 second
+            var x = setInterval(function() {
+                // Get today's date and time
+                var now = new Date().getTime();
+                
+                // Find the distance between now and the countdown date
+                var distance = countDownDate - now;
+                
+                // Time calculations for days, hours, minutes, and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Display the result in the element with id="countdown"
+                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " 
+                + minutes + "m " + seconds + "s ";
+                
+                // If the countdown is over, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "The event has started!";
+                }
+            }, 1000);
+        </script>
+
         <div id="nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear" >
             <div class="max-w-6xl mx-auto px-6">
                 <div class="flex items-center container">
