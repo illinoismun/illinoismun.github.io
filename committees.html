@@ -71,39 +71,60 @@
             </div>
         </div>
 
-        <section
+        <!-- <section
             class="relative flex h-[25vh] md:h-[40vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
-            <img class="fixed brightness-50 w-full  object-cover object-top h-fill" src="assets/muni-wide.jpg"></img>
-            <!--<h1 class="fixed text-4xl sm:text-5xl font-bold mt-20">About</h1>-->
+            <img class="fixed brightness-50 w-full  object-cover object-top h-fill" src="assets/muni-wide.jpg"></img> -->
+        <!-- <video class="fixed brightness-50 w-full object-cover object-top h-full" src="assets/committees.mp4" controls autoplay muted loop></video> -->
+
+        <!--<h1 class="fixed text-4xl sm:text-5xl font-bold mt-20">About</h1>-->
+        <!-- </section> -->
+                 <!-- END NAVIGATION -->
+
+        
+
+        <section
+            class="relative flex min-h-screen h-[100vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
+            <video class="fixed brightness-75 w-full h-full object-cover" muted autoplay loop playsinline
+                disablepictureinpicture>
+                <source src="assets/committees.mp4" type="video/mp4" />
+            </video>
+
+            <h1 class="fixed max-w-5xl text-5xl sm:text-6xl font-bold text-center leading-tight md:leading-snug">
+                Committees
+            </h1>
+
+
+            <svg fill="#ffffff" class="z-10 fixed animate-bounce bottom-10" height="5vh" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
+                xml:space="preserve">
+                <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
+            </svg>
         </section>
-        <!-- END NAVIGATION -->
+
         <section class="w-full z-20 bg-white h-full">
 
-            <div class="max-w-5xl px-16 md:px-0 mx-auto ">
+            <div class="w-full px-16 md:px-0 mx-auto ">
                 <h1
                     class="pt-16 text-xl font-sans uppercase font-extrabold flex items-center tracking-wide justify-center text-center">
                     Hybrid Committees</h1>
                 <div
-                    class="grid mx-auto max-w-3xl gap-10 py-10 grid-cols-2 md:grid-cols-2 justify-center place-items-center ">
-                    <!-- <div class="flex justify-center items-center w-72 h-72 bg-cover bg-center hover:brightness-75 transition ease-in-out duration-200" style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('assets/unescap.jpeg');"> -->
-                    <!-- Image source: https://www.gov.kz/uploads/2023/5/16/ac5115856693bd677b0666166aff9b23_original.110611.jpeg -->
-                    <!-- <h1 class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-3xl">TBA</h1> -->
-                    <!-- </div> -->
+                    class="grid mx-auto max-w-3xl gap-5 py-10 grid-cols-1 md:grid-cols-2 justify-center place-items-center ">
+
                     <a href="./adhoc">
-                        <div class="flex justify-center items-center w-72 h-72 bg-cover bg-center hover:brightness-75 transition ease-in-out duration-200"
+                        <div class="flex mt-10 md:mt-0 justify-center items-center w-72 h-72 bg-cover bg-center hover:brightness-75 transition ease-in-out duration-200"
                             style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('assets/adhoc.jpg');">
-                            <!-- Image source: https://www.gov.kz/uploads/2023/5/16/ac5115856693bd677b0666166aff9b23_original.110611.jpeg -->
                             <h1
-                                class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-3xl">
-                                Ad-Hoc Committee of the Secretary General</h1>
+                                class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-2xl">
+                                Security Clearance Required: Ad-Hoc Committee of the Secretary General</h1>
                         </div>
                     </a>
                     <a href="./icj">
                         <div class="flex mt-10 md:mt-0 justify-center items-center w-72 h-72 bg-cover bg-center hover:brightness-75 transition ease-in-out duration-200"
                             style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('assets/icj.jpg');">
-                            <!-- Image source: https://s.abcnews.com/images/Politics/gty_state_of_union_jc_160930_16x9_992.jpg -->
                             <h1
-                                class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-3xl">
+                                class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-2xl">
                                 International Court of Justice</h1>
                         </div>
                     </a>
@@ -112,21 +133,19 @@
                 </div>
 
 
-                <div class="max-w-5xl px-16 md:px-0 mx-auto ">
-
+                <div class="w-full px-16 md:px-0 mx-auto ">
 
                     <h1
                         class="pt-16 text-xl font-sans uppercase font-extrabold flex items-center tracking-wide justify-center text-center">
                         General Assemblies</h1>
                     <div
-                        class="grid mx-auto max-w-3xl gap-100 py-10 grid-cols-3 md:grid-cols-3 justify-center place-items-center ">
+                        class="grid mx-auto max-w-6xl gap-10 py-10 grid-cols-3 md:grid-cols-3 justify-center place-items-center ">
 
                         <a href="./imf">
                             <div class="flex mt-10 md:mt-0 justify-center items-center w-72 h-72 bg-cover bg-center hover:brightness-75 transition ease-in-out duration-200"
                                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('assets/imf.jpg');">
-                                <!-- Image source: https://s.abcnews.com/images/Politics/gty_state_of_union_jc_160930_16x9_992.jpg -->
                                 <h1
-                                    class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-3xl">
+                                    class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-2xl">
                                     International Monetary Fund</h1>
                             </div>
                         </a>
@@ -134,9 +153,8 @@
                         <a href="./unesco">
                             <div class="flex mt-10 md:mt-0 justify-center items-center w-72 h-72 bg-cover bg-center hover:brightness-75 transition ease-in-out duration-200"
                                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('assets/unesco.jpg');">
-                                <!-- Image source: https://s.abcnews.com/images/Politics/gty_state_of_union_jc_160930_16x9_992.jpg -->
                                 <h1
-                                    class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-3xl">
+                                    class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-2xl">
                                     UNESCO</h1>
                             </div>
                         </a>
@@ -144,9 +162,8 @@
                         <a href="./disec">
                             <div class="flex mt-10 md:mt-0 justify-center items-center w-72 h-72 bg-cover bg-center hover:brightness-75 transition ease-in-out duration-200"
                                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('assets/disec.jpg');">
-                                <!-- Image source: https://s.abcnews.com/images/Politics/gty_state_of_union_jc_160930_16x9_992.jpg -->
                                 <h1
-                                    class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-3xl">
+                                    class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-2xl">
                                     DISEC</h1>
                             </div>
                         </a>
@@ -160,9 +177,8 @@
                         <a href="./olympians">
                             <div class="flex mt-10 md:mt-0 justify-center items-center w-72 h-72 bg-cover bg-center hover:brightness-75 transition ease-in-out duration-200"
                                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('assets/olympus.jpeg');">
-                                <!-- Image source: https://s.abcnews.com/images/Politics/gty_state_of_union_jc_160930_16x9_992.jpg -->
                                 <h1
-                                    class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-3xl">
+                                    class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-2xl">
                                     Olympian Gods: Titanomachy Committee</h1>
                             </div>
                         </a>
@@ -170,9 +186,8 @@
                         <a href="./russian">
                             <div class="flex mt-10 md:mt-0 justify-center items-center w-72 h-72 bg-cover bg-center hover:brightness-75 transition ease-in-out duration-200"
                                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('assets/russia.jpg');">
-                                <!-- Image source: https://s.abcnews.com/images/Politics/gty_state_of_union_jc_160930_16x9_992.jpg -->
                                 <h1
-                                    class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-3xl">
+                                    class="align-middle text-center text-white uppercase tracking-wider font-extrabold text-2xl">
                                     Russian Council of Ministers</h1>
                             </div>
                         </a>
