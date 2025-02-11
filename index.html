@@ -34,14 +34,14 @@
             </video>
             <h1 class="fixed text-5xl sm:text-6xl font-bold">MUNI XXVII</h1>
             <h1 class="fixed text-xl sm:text-2xl mt-24 sm:mt-28">April 18-20th, 2025</h1>
-            <div></div>
             <h1 id="countdown" class="text-xl bg-transparent text-white p-2 rounded-md border border-white "></h1>
+        
             <style>
                 #countdown {
                     position: fixed;
                     bottom: 150px;
                     text-align: center;
-                    width: 30%;
+                    width: 25%;
                 }
 
                 @media (max-width: 768px) {
@@ -49,7 +49,6 @@
                         width: 45%;
                     }
                 }
-            </style>
             </style>            
             
             <svg fill="#ffffff" class="z-20 fixed animate-bounce bottom-10" height="5vh" version="1.1" id="Layer_1"
@@ -86,7 +85,7 @@
                 // If the countdown is over, write some text
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "The event has started!";
+                    document.getElementById("countdown").innerHTML = "MUNI XXVII has begun!";
                 }
             }, 1000);
         </script>
