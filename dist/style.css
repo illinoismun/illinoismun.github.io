@@ -2609,3 +2609,11 @@ select {
       display: block;
   }
 }
+
+.ml-8 ul {
+  padding-left: 1.5rem; /* Adjust this value as necessary */
+}
+
+.ml-8 li {
+  text-indent: -1.5rem; /* Indent the second line back in line with the first */
+}
