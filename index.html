@@ -35,7 +35,7 @@
             <h1 class="fixed text-5xl sm:text-6xl font-bold">MUNI XXVII</h1>
             <h1 class="fixed text-xl sm:text-2xl mt-24 sm:mt-28">April 18-19th, 2025</h1>
             <h1 id="countdown" class="text-xl bg-transparent text-white p-2 rounded-md border border-white "></h1>
-        
+
             <style>
                 #countdown {
                     position: fixed;
@@ -49,8 +49,8 @@
                         width: 45%;
                     }
                 }
-            </style>            
-            
+            </style>
+
             <svg fill="#ffffff" class="z-20 fixed animate-bounce bottom-10" height="5vh" version="1.1" id="Layer_1"
                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
                 xml:space="preserve">
@@ -63,25 +63,25 @@
         <script>
             // Set the date we're counting down to
             var countDownDate = new Date("April 18, 2025 16:00:00").getTime();
-        
+
             // Update the countdown every 1 second
-            var x = setInterval(function() {
+            var x = setInterval(function () {
                 // Get today's date and time
                 var now = new Date().getTime();
-                
+
                 // Find the distance between now and the countdown date
                 var distance = countDownDate - now;
-                
+
                 // Time calculations for days, hours, minutes, and seconds
                 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
+
                 // Display the result in the element with id="countdown"
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " 
-                + minutes + "m " + seconds + "s ";
-                
+                document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+
                 // If the countdown is over, write some text
                 if (distance < 0) {
                     clearInterval(x);
@@ -90,7 +90,7 @@
             }, 1000);
         </script>
 
-        <div id="nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear" >
+        <div id="nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="flex items-center container">
                     <a href="./"><img id="logo-area" src="assets/model-un-logo-outline.png" alt="logo"
@@ -100,6 +100,7 @@
                         <a class="ml-8 font-semibold uppercase text-sm" href="./registration">Registration</a>
                         <a class="ml-8 font-semibold uppercase text-sm" href="./committees">Committees</a>
                         <a class="ml-8 font-semibold uppercase text-sm" href="./schedule">Schedule</a>
+                        <a class="ml-8 font-semibold uppercase text-sm" href="./logistics">Logistics</a>
                         <a class="ml-8 font-semibold uppercase text-sm" href="./contact">Contact</a>
                     </div>
                     <button id="tog" class="ml-auto md:hidden text-xl text-gray1 pr-5" onclick="showDiv()">
@@ -130,6 +131,7 @@
                 <a class="font-semibold uppercase text-sm my-4" href="./registration">Registration</a>
                 <a class="font-semibold uppercase text-sm my-4" href="./committees">Committees</a>
                 <a class="font-semibold uppercase text-sm my-4" href="./schedule">Schedule</a>
+                <a class="font-semibold uppercase text-sm my-4" href="./logistics">Logistics</a>
                 <a class="font-semibold uppercase text-sm my-4" href="./contact">Contact</a>
             </div>
         </div>
@@ -175,9 +177,10 @@
                         returning or this is our first time hosting you, we can assure you that this conference will be
                         a rewarding experience for all delegates.
                         <br><br>
-                        
+
                         We are so excited to see you all in Urbana-Champaign this April 18-19th for MUNI XXVII, and will
-                        be in touch throughout the year to keep you updated! For any questions or concerns, feel free to contact me directly at <a class="link"
+                        be in touch throughout the year to keep you updated! For any questions or concerns, feel free to
+                        contact me directly at <a class="link"
                             href="mailto:secgen@illinoismun.org">secgen@illinoismun.org</a>.
                         <br><br>
                         Sincerely,
@@ -263,7 +266,7 @@
             const sidenav = document.getElementById('sidenav');
             sidenav.style.right = '0'; // Show the sidenav
         }
-        
+
         function hideDiv() {
             const sidenav = document.getElementById('sidenav');
             sidenav.style.right = '-300px'; // Hide the sidenav
