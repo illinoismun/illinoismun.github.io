@@ -11,6 +11,7 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest">
     <link rel="stylesheet" href="dist/style.css">
     <link rel="stylesheet" href="dist/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
@@ -24,7 +25,56 @@
 </head>
 
 <body>
+<script>
+            function showDiv() {
+                const sidenav = document.getElementById('sidenav');
+                sidenav.style.right = '0'; // Show the sidenav
+            }
 
+            function hideDiv() {
+                const sidenav = document.getElementById('sidenav');
+                sidenav.style.right = '-300px'; // Hide the sidenav
+            }
+        </script>
+        <script>
+            // Check if the user is on a mobile device
+            function isMobile() {
+                return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+            }
+
+            // Modify the link based on the device type
+            document.addEventListener('DOMContentLoaded', function () {
+                const link = document.getElementById('google-maps-link');
+                const googleMapsUrl = 'https://maps.app.goo.gl/X1kWbqSebLc76uqeA';
+                const mobileUrl = 'google.navigation:q=X1kWbqSebLc76uqeA'; // This is for Android/iOS devices, opens Google Maps app.
+
+                if (isMobile()) {
+                    // For mobile devices, attempt to open the Google Maps app
+                    link.setAttribute('href', mobileUrl);
+                } else {
+                    // For desktop/laptop, keep the link to the web version
+                    link.setAttribute('href', googleMapsUrl);
+                }
+            });
+
+            // Function to toggle the submenu under "About"
+            function toggleSubmenu() {
+                var submenu = document.getElementById("about-submenu");
+                submenu.classList.toggle("hidden");
+            }
+            function toggleIMUNSubmenu() {
+                var submenu = document.getElementById("imun-submenu");
+                submenu.classList.toggle("hidden");
+            }
+            function toggleMUNISubmenu() {
+                var submenu = document.getElementById("muni-submenu");
+                submenu.classList.toggle("hidden");
+            }
+            function toggleSubmenu(submenuId) {
+                const submenu = document.getElementById(submenuId);
+                submenu.classList.toggle('hidden');
+            }
+        </script>
     <div class="relative">
         <section
             class="relative h-[100vh] flex top-0 shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
@@ -90,18 +140,46 @@
             }, 1000);
         </script>
 
-        <div id="nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear">
+        <!---NAVBAR-->
+        <!-- START NAVIGATION -->
+
+        <div id="full-nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="flex items-center container">
                     <a href="./"><img id="logo-area" src="assets/model-un-logo-outline.png" alt="logo"
                             style="float: left;" class="w-32"></a>
                     <div class="ml-auto sm:flex text-white font-sans hidden">
-                        <a class="ml-8 font-semibold uppercase text-sm" href="./about">About</a>
-                        <a class="ml-8 font-semibold uppercase text-sm" href="./registration">Registration</a>
-                        <a class="ml-8 font-semibold uppercase text-sm" href="./committees">Committees</a>
-                        <a class="ml-8 font-semibold uppercase text-sm" href="./schedule">Schedule</a>
-                        <a class="ml-8 font-semibold uppercase text-sm" href="./logistics">Logistics</a>
-                        <a class="ml-8 font-semibold uppercase text-sm" href="./contact">Contact</a>
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">Illinois MUN</a>
+                            <div class="dropdown-menu">
+                                <a class="subtitle-link" href="./clubschedule">Meeting Schedule</a>
+                                <a class="subtitle-link" href="./joinus">Join Us</a>
+                            </div>
+                        </div>
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">MUNI XXVII</a>
+                            <div class="dropdown-menu">
+                                <a class="subtitle-link" href="./about">Meet The Secretariat</a>
+                                <a class="subtitle-link" href="./committees">Committee Introduction</a>
+                                <a class="subtitle-link" href="./schedule">Conference Schedule</a>
+                                <a class="subtitle-link" href="./registration">Registration</a>
+                                <a class="subtitle-link" href="./logistics">Logistics</a>
+                            </div>
+                        </div>
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">Delegate Resources</a>
+                            <div class="dropdown-menu">
+                                <a class="subtitle-link" href="./ga">General Assemblies</a>
+                                <a class="subtitle-link" href="./crisis">Crisis Committees</a>
+                            </div>
+                        </div>
+                        <!-- <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm" href="./sponsor">Sponsorship</a>
+
+                        </div> -->
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm" href="./contact">Contact</a>
+                        </div>
                     </div>
                     <button id="tog" class="ml-auto md:hidden text-xl text-gray1 pr-5" onclick="showDiv()">
                         <svg stroke="#ffffff" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
@@ -126,15 +204,104 @@
                 </button>
             </div>
             <div class="flex flex-col justify-center items-end font-sans h-full text-white">
-                <a class="font-semibold uppercase text-sm my-4" href="./">Home</a>
-                <a class="font-semibold uppercase text-sm my-4" href="./about">About</a>
-                <a class="font-semibold uppercase text-sm my-4" href="./registration">Registration</a>
-                <a class="font-semibold uppercase text-sm my-4" href="./committees">Committees</a>
-                <a class="font-semibold uppercase text-sm my-4" href="./schedule">Schedule</a>
-                <a class="font-semibold uppercase text-sm my-4" href="./logistics">Logistics</a>
+                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
+                    onclick="toggleSubmenu('imun-submenu')">Illinois MUN</a>
+                <div id="imun-submenu" class="submenu hidden pl-4">
+                    <a class="font-semibold uppercase text-sm my-4" href="./schedule">Club Schedule</a>
+                    <a class="font-semibold uppercase text-sm my-4" href="./joinus">Join Us</a> 
+                </div>
+                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
+                    onclick="toggleSubmenu('muni-submenu')">MUNI XXVII</a>
+                <div id="muni-submenu" class="submenu hidden pl-4">
+                    <a class="font-semibold uppercase text-sm my-4" href="./about">Meet The Secretariat</a>
+                    <a class="font-semibold uppercase text-sm my-4" href="./committees">Committee Introduction</a>
+                    <a class="font-semibold uppercase text-sm my-4" href="./schedule">Conference Schedule</a>
+                    <a class="font-semibold uppercase text-sm my-4" href="./registration">Registration</a>
+                    <a class="font-semibold uppercase text-sm my-4" href="./logistics">Logistics</a>
+                </div>
+                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
+                    onclick="toggleSubmenu('delegate-resources')">Delegate Resources</a>
+                <div id="delegate-resources" class="submenu hidden pl-4">
+                    
+                    <a class="font-semibold uppercase text-sm my-4" href="./ga">General Assemblies</a>
+                    <a class="font-semibold uppercase text-sm my-4" href="./crisis">Crisis Committees</a>
+                </div>
                 <a class="font-semibold uppercase text-sm my-4" href="./contact">Contact</a>
             </div>
         </div>
+
+        <section
+            class="relative flex h-[25vh] md:h-[40vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
+            <img class="fixed brightness-50 w-full  object-cover object-top h-fill" src="assets/quad.jpeg"></img>
+        </section>
+        <!-- END NAVIGATION -->
+
+
+        <script>
+            function showDiv() {
+                const sidenav = document.getElementById('sidenav');
+                sidenav.style.right = '0'; // Show the sidenav
+            }
+
+            function hideDiv() {
+                const sidenav = document.getElementById('sidenav');
+                sidenav.style.right = '-300px'; // Hide the sidenav
+            }
+        </script>
+        <script>
+            // Check if the user is on a mobile device
+            function isMobile() {
+                return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+            }
+
+            // Modify the link based on the device type
+            document.addEventListener('DOMContentLoaded', function () {
+                const link = document.getElementById('google-maps-link');
+                const googleMapsUrl = 'https://maps.app.goo.gl/X1kWbqSebLc76uqeA';
+                const mobileUrl = 'google.navigation:q=X1kWbqSebLc76uqeA'; // This is for Android/iOS devices, opens Google Maps app.
+
+                if (isMobile()) {
+                    // For mobile devices, attempt to open the Google Maps app
+                    link.setAttribute('href', mobileUrl);
+                } else {
+                    // For desktop/laptop, keep the link to the web version
+                    link.setAttribute('href', googleMapsUrl);
+                }
+            });
+
+            // Function to toggle the submenu under "About"
+            function toggleSubmenu() {
+                var submenu = document.getElementById("about-submenu");
+                submenu.classList.toggle("hidden");
+            }
+            function toggleIMUNSubmenu() {
+                var submenu = document.getElementById("imun-submenu");
+                submenu.classList.toggle("hidden");
+            }
+            function toggleMUNISubmenu() {
+                var submenu = document.getElementById("muni-submenu");
+                submenu.classList.toggle("hidden");
+            }
+            function toggleSubmenu(submenuId) {
+                const submenu = document.getElementById(submenuId);
+                submenu.classList.toggle('hidden');
+            }
+        </script>
+        <style>
+            .custom-image {
+                width: 100%;
+                /* Ensures the image takes the full width of the column */
+                height: 0;
+                padding-top: 66.67%;
+                /* This sets the aspect ratio (625 / 940 = 0.6667) */
+                object-fit: cover;
+                /* This will make the image cover the area without stretching */
+            }
+        </style>
+        <!---->
+
+
+
         <section id="main" class="w-full z-50 bg-white h-full">
             <div class="max-w-4xl px-16 md:px-0 mx-auto ">
                 <h1 class="pt-24 text-3xl font-serif font-bold flex items-center justify-center text-center">Welcome to
@@ -196,7 +363,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- START FOOTER -->
         <footer class="bg-gray-900">
             <div class="mx-auto w-full max-w-5xl p-4 px-12 md:px-0 py-6 md:py-16">
                 <div class="md:flex md:justify-between">

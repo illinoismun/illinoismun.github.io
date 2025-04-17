@@ -27,18 +27,43 @@
     <div class="relative">
         <!-- START NAVIGATION -->
 
-        <div id="nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear">
+        <div id="full-nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="flex items-center container">
                     <a href="./"><img id="logo-area" src="assets/model-un-logo-outline.png" alt="logo"
                             style="float: left;" class="w-32"></a>
                     <div class="ml-auto sm:flex text-white font-sans hidden">
-                        <a class="ml-8 font-semibold uppercase text-sm" href="./about">About</a>
-                        <a class="ml-8 font-semibold uppercase text-sm" href="./registration">Registration</a>
-                        <a class="ml-8 font-semibold uppercase text-sm" href="./committees">Committees</a>
-                        <a class="ml-8 font-semibold uppercase text-sm" href="./schedule">Schedule</a>
-                        <a class="ml-8 font-semibold uppercase text-sm" href="./logistics">Logistics</a>
-                        <a class="ml-8 font-semibold uppercase text-sm" href="./contact">Contact</a>
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">Illinois MUN</a>
+                            <div class="dropdown-menu">
+                                <a class="subtitle-link" href="./clubschedule.html">Meeting Schedule</a>
+                                <a class="subtitle-link" href="./joinus">Join Us</a>
+                            </div>
+                        </div>
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">MUNI XXVII</a>
+                            <div class="dropdown-menu">
+                                <a class="subtitle-link" href="./about">Meet The Secretariat</a>
+                                <a class="subtitle-link" href="./committees">Committee Introduction</a>
+                                <a class="subtitle-link" href="./schedule">Conference Schedule</a>
+                                <a class="subtitle-link" href="./registration">Registration</a>
+                                <a class="subtitle-link" href="./logistics">Logistics</a>
+                            </div>
+                        </div>
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">Delegate Resources</a>
+                            <div class="dropdown-menu">
+                                <a class="subtitle-link" href="./ga">General Assemblies</a>
+                                <a class="subtitle-link" href="./crisis">Crisis Committees</a>
+                            </div>
+                        </div>
+                        <!-- <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm" href="./sponsor">Sponsorship</a>
+
+                        </div> -->
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm" href="./contact">Contact</a>
+                        </div>
                     </div>
                     <button id="tog" class="ml-auto md:hidden text-xl text-gray1 pr-5" onclick="showDiv()">
                         <svg stroke="#ffffff" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
@@ -63,15 +88,36 @@
                 </button>
             </div>
             <div class="flex flex-col justify-center items-end font-sans h-full text-white">
-                <a class="font-semibold uppercase text-sm my-4" href="./">Home</a>
-                <a class="font-semibold uppercase text-sm my-4" href="./about">About</a>
-                <a class="font-semibold uppercase text-sm my-4" href="./registration">Registration</a>
-                <a class="font-semibold uppercase text-sm my-4" href="./committees">Committees</a>
-                <a class="font-semibold uppercase text-sm my-4" href="./schedule">Schedule</a>
-                <a class="font-semibold uppercase text-sm my-4" href="./logistics">Logistics</a>
+                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
+                    onclick="toggleSubmenu('imun-submenu')">Illinois MUN</a>
+                <div id="imun-submenu" class="submenu hidden pl-4">
+                    <a class="font-semibold uppercase text-sm my-4" href="./clubschedule.html">Club Schedule</a>
+                    <a class="font-semibold uppercase text-sm my-4" href="./joinus">Join Us</a>
+                </div>
+                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
+                    onclick="toggleSubmenu('muni-submenu')">MUNI XXVII</a>
+                <div id="muni-submenu" class="submenu hidden pl-4">
+                    <a class="font-semibold uppercase text-sm my-4" href="./about">Meet The Secretariat</a>
+                    <a class="font-semibold uppercase text-sm my-4" href="./committees">Committee Introduction</a>
+                    <a class="font-semibold uppercase text-sm my-4" href="./schedule">Conference Schedule</a>
+                    <a class="font-semibold uppercase text-sm my-4" href="./registration">Registration</a>
+                    <a class="font-semibold uppercase text-sm my-4" href="./logistics">Logistics</a>
+                </div>
+                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
+                    onclick="toggleSubmenu('delegate-resources')">Delegate Resources</a>
+                <div id="delegate-resources" class="submenu hidden pl-4">
+
+                    <a class="font-semibold uppercase text-sm my-4" href="./ga">General Assemblies</a>
+                    <a class="font-semibold uppercase text-sm my-4" href="./crisis">Crisis Committees</a>
+                </div>
                 <a class="font-semibold uppercase text-sm my-4" href="./contact">Contact</a>
             </div>
         </div>
+
+        <section
+            class="relative flex h-[25vh] md:h-[40vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
+            <img class="fixed brightness-50 w-full  object-cover object-top h-fill" src="assets/quad.jpeg"></img>
+        </section>
 
         <section
             class="relative flex h-[25vh] md:h-[40vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">

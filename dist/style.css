@@ -2591,21 +2591,460 @@ select {
 }
 
 /* Hide the toggle button on larger screens */
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
   #tog {
       display: none;
   }
   #nav .sm\\:flex {
       display: flex;
   }
-}
+} */
 
 /* Hide the horizontal navigation on smaller screens */
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   #nav .sm\\:flex {
       display: none;
   }
   #tog {
       display: block;
   }
+} */
+
+/* .ml-8 ul {
+  padding-left: 1.5rem;
+} */
+
+/* .ml-8 li {
+  text-indent: -1.5rem;
+} */
+
+/* Basic Styles */
+/* body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+} */
+
+/* Full Screen Navigation Bar */
+.full-nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  /* margin-top: 3px; */
+}
+
+.full-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  /* display: inline-block; */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  /* left: 0; */
+  transform: translateX(3%);
+  background-color: rgba(31, 41, 55, 0.8);
+  /* padding: 10px; */
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  min-width: 240px;
+  align-self: left;
+  /* margin-top: 8px; */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  visibility: visible;
+}
+
+/* Mobile Navigation Bar */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  width: 70%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  transition: all 0.5s ease;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.mobile-nav button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+}
+
+/* Mobile Nav Active State */
+.mobile-nav.active {
+  right: 0;
+}
+
+/* Hide toggle button on larger screens */
+@media (min-width: 640px) {
+  #tog {
+      display: none;
+  }
+
+  /* Full navigation for larger screens */
+  .sm\\:flex {
+      display: flex;
+  }
+}
+
+/* Hide the horizontal navigation on smaller screens */
+@media (max-width: 640px) {
+  .sm\\:flex {
+      display: none;
+  }
+
+  #tog {
+      display: block;
+  }
+
+  .mobile-nav a {
+      font-size: 16px;
+  }
+}
+
+/* Styling for links with indentation on mobile */
+.ml-8 ul {
+  padding-left: 1.5rem; /* Adjust this value as necessary */
+}
+
+.ml-8 li {
+  text-indent: -1.5rem; /* Indent the second line back in line with the first */
+}
+
+/* General mobile styles */
+@media (max-width: 768px) {
+  /* Adjust padding for mobile view */
+  .full-nav {
+      padding: 15px;
+  }
+  
+  .full-nav a {
+      font-size: 12px;  /* Adjust font size for mobile */
+  }
+
+  .dropdown-menu {
+      min-width: 150px; /* Adjust width of dropdown on mobile */
+  }
+}
+
+/* Default state for all titles */
+.title-link {
+  color: white; /* Default titles color is white */
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-inline: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scaling */
+  margin-bottom: 8px;
+}
+
+/* When a title is hovered, it remains white and the other titles become gray */
+.title-link:hover {
+  color: white; /* Hovered title stays white */
+  opacity: 1; /* Ensure hovered title is fully visible */
+  /* transform: scale(1.05); */
+}
+
+/* Titles that are not hovered become gray */
+.title-link:hover ~ .title-link {
+  color: lightgray; /* Non-hovered titles turn gray */
+  opacity: 0.5; /* Non-hovered titles are slightly transparent */
+}
+
+/* Default state for subtitles */
+.subtitle-link {
+  color: grey; /* Default color for subtitles is gray */
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: block;
+  transition: color 0.3s ease; /* Smooth transition for color */
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* When a subtitle is hovered, it becomes white */
+.subtitle-link:hover {
+  color: white; /* Hovered subtitle turns white */
+  opacity: 1; /* Ensure hovered subtitle is fully visible */
+  transform: scale(1.05) translateX(10px);
+}
+
+/* Revert subtitle color back to gray when it's not hovered */
+.subtitle-link:not(:hover) {
+  color: gray; /* Non-hovered subtitle remains gray */
+}
+
+/* .submenu a {
+  display: block; 
+  margin-bottom: 10px; 
+  text-decoration: none; 
+}
+
+.submenu {
+  padding-left: 16px;
+}
+
+.submenu.hidden {
+  display: none;
+} */
+
+/* Make submenu hidden by default */
+/* .submenu {
+  display: none;
+  padding-left: 16px;
+}
+
+a:hover + .submenu {
+  display: block;
+} */
+
+/* Ensure submenu is hidden by default */
+.submenu {
+  /* display: none; */
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 16px;
+  opacity: 0; /* Initially invisible */
+  transition: max-height 0.3s ease-out, opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+/* Show submenu when hovering over the parent <a> */
+a:hover + .submenu,
+.submenu:hover {
+  max-height: 500px;
+  display: block;
+  opacity: 1; /* Make it visible */
+}
+
+/* Ensure submenu items are displayed in block format */
+.submenu a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: lightgray;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  opacity: 0.7;
+}
+
+/* When a submenu item is hovered, it becomes white */
+.submenu a:hover {
+  color: white; /* Hovered submenu item turns white */
+  opacity: 1; /* Fully visible on hover */
+}
+
+/* Optional: If you want the hovered items to be slightly larger, you can add scale */
+.submenu a:hover {
+  transform: scale(1.05) translateX(-10px); /* Optionally, make it slightly larger when hovered */
+}
+
+/* Optional: You can add some delay for smoothness */
+/* .submenu {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+a:hover + .submenu {
+  opacity: 1;
+  display: block;
+} */
+
+/* Centering the iframe container */
+.iframe-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100%; /* Take full height of the page */
+  /* padding-top: 50px; */
+}
+
+/* Define the button styles */
+.discord-button {
+  font-size: 0.875rem; /* Same as text-sm */
+  width: 3.5rem; /* Set width */
+  height: 3.5rem; /* Set height */
+  padding: 0; /* Remove padding */
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Ensure the icon is centered */
+  border-radius: 0.375rem; /* Slight border-radius (optional) */
+  border-width: 2.5px; /* Same as border-2 */
+  border-color: #1F2937; /* Blue-700 */
+  color: #1F2937; /* Blue-700 */
+  background-color: transparent; /* No background initially */
+  font-weight: 500; /* Same as font-medium */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+}
+
+.discord-button:hover {
+  background-color: #1F2937;
+  color: #1F2937; /* Blue-700 */
+  border-color: #1F2937; /* Blue-700 */
+}
+
+.discord-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.5); /* Blue-300 focus ring */
+}
+
+/* Discord icon */
+.discord-icon {
+  width: 28px;
+  height: 28px;
+  color: #1F2937; /* Blue-700 */
+  transition: color 0.3s;
+}
+
+/* On hover, change the icon color */
+.discord-button:hover .discord-icon {
+  color: white; /* Blue-700 */
+}
+
+.social-media-button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the content to the right */
+  padding: 20px; /* Optional: Adds padding around the container */
+  gap: 20px;
+  padding-right: 30px;
+}
+
+.brochure-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Define the button styles */
+.brochure-button {
+  font-size: 0.875rem; /* Same as text-sm */
+  width: 24rem; /* Set width */
+  height: 3.5rem; /* Set height */
+  padding: 0; /* Remove padding */
+  font-size: medium;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Ensure the icon is centered */
+  border-radius: 0.375rem; /* Slight border-radius (optional) */
+  border-width: 2.5px; /* Same as border-2 */
+  border-color: #1F2937; /* Blue-700 */
+  color: #1F2937; /* Blue-700 */
+  background-color: transparent; /* No background initially */
+  font-weight: 500; /* Same as font-medium */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+}
+
+.brochure-button:hover {
+  background-color: #1F2937;
+  color: #1F2937; /* Blue-700 */
+  border-color: #1F2937; /* Blue-700 */
+  color: white;
+}
+
+.brochure-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.5); /* Blue-300 focus ring */
+}
+
+/* Specific grid for headshot layout */
+.headshot-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  gap: 5px; /* Space between items */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.headshot-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 equal-width columns */
+  gap: 5px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.headshot-grid-1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 3 equal-width columns */
+  gap: 5px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Container to center each image */
+.headshot-container {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center text */
+}
+
+/* Square headshot styling */
+.headshot {
+  width: 300px; /* Fixed size for the image */
+  height: 300px; /* Ensure it's a square */
+  object-fit: cover; /* Ensures image fills the square */
+}
+
+/* Styling for the text container */
+.headshot-info {
+  margin-top: 10px; /* Space between image and text */
+}
+
+/* Name and position styling */
+.name {
+  font-size: 1rem; /* Equivalent to text-xl in Tailwind */
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem; /* Equivalent to mb-4 in Tailwind */
+  text-transform: uppercase; /* Equivalent to uppercase in Tailwind */
+  font-weight: bold; /* Adding bold */
+  font-family: "Helvetica", sans-serif; /* Assuming a light font is being used */
+  letter-spacing: 0.05em; /* Equivalent to tracking-wide in Tailwind */
+}
+
+.position {
+  font-size: 0.75rem; /* Equivalent to text-xl in Tailwind */
+  margin-bottom: 1rem; /* Equivalent to mb-4 in Tailwind */
+  text-transform: uppercase; /* Equivalent to uppercase in Tailwind */
+  font-weight: bold; /* Adding bold */
+  font-family: "Helvetica", sans-serif; /* Assuming a light font is being used */
+  letter-spacing: 0.05em; /* Equivalent to tracking-wide in Tailwind */
+  color: gray;
 }
