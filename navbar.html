@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule | MUNI XXVII</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="stylesheet" href="dist/style.css">
-    <link rel="stylesheet" href="dist/index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="stylesheet" href="../dist/style.css">
+    <link rel="stylesheet" href="../dist/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,11 +31,11 @@
         <div id="full-nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="flex items-center container">
-                    <a href="./"><img id="logo-area" src="assets/model-un-logo-outline.png" alt="logo"
+                    <a href="./"><img id="logo-area" src="../assets/model-un-logo-outline.png" alt="logo"
                             style="float: left;" class="w-32"></a>
                     <div class="ml-auto sm:flex text-white font-sans hidden">
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                            <a class="title-link ml-8 font-semibold uppercase text-sm" >Illinois MUN</a>
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">Illinois MUN</a>
                             <div class="dropdown-menu">
                                 <a class="subtitle-link" class="subtitle-link" href="#">Meet The Exec Board</a>
                                 <a class="subtitle-link" href="#">Meeting Schedule</a>
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                            <a class="title-link ml-8 font-semibold uppercase text-sm" >MUNI XXVII</a>
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">MUNI XXVII</a>
                             <div class="dropdown-menu">
                                 <a class="subtitle-link" href="#">Meet The Secretariats</a>
                                 <a class="subtitle-link" href="#">Committee Introduction</a>
@@ -99,14 +99,16 @@
                 </button>
             </div>
             <div class="flex flex-col justify-center items-end font-sans h-full text-white">
-                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)" onclick="toggleSubmenu('imun-submenu')">Illinois MUN</a>
+                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
+                    onclick="toggleSubmenu('imun-submenu')">Illinois MUN</a>
                 <div id="imun-submenu" class="submenu hidden pl-4">
                     <a class="font-semibold uppercase text-sm my-4" href="#">Meet The Exec Board</a>
                     <a class="font-semibold uppercase text-sm my-4" href="#">Meeting Schedule</a>
                     <a class="font-semibold uppercase text-sm my-4" href="#">Club Resources</a>
                     <a class="font-semibold uppercase text-sm my-4" href="#">Join Us</a>
                 </div>
-                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)" onclick="toggleSubmenu('muni-submenu')">MUNI XXVII</a>
+                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
+                    onclick="toggleSubmenu('muni-submenu')">MUNI XXVII</a>
                 <div id="muni-submenu" class="submenu hidden pl-4">
                     <a class="font-semibold uppercase text-sm my-4" href="#">Meet The Secretariat</a>
                     <a class="font-semibold uppercase text-sm my-4" href="#">Committee Introduction</a>
@@ -116,7 +118,7 @@
                 </div>
                 <!-- <a class="font-semibold uppercase text-sm my-4" href="./about">About</a> -->
                 <!-- About link -->
-                
+
 
                 <a class="font-semibold uppercase text-sm my-4" href="./registration">Sponsorship</a>
                 <!-- <a class="font-semibold uppercase text-sm my-4" href="./committees">Committees</a>
@@ -128,17 +130,17 @@
 
         <section
             class="relative flex h-[25vh] md:h-[40vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
-            <img class="fixed brightness-50 w-full  object-cover object-top h-fill" src="assets/quad.jpeg"></img>
+            <img class="fixed brightness-50 w-full  object-cover object-top h-fill" src="../assets/quad.jpeg"></img>
         </section>
         <!-- END NAVIGATION -->
-        
+
         <!-- START FOOTER -->
         <footer class="bg-gray-900">
             <div class="mx-auto w-full max-w-5xl p-4 px-12 md:px-0 py-6 md:py-16">
                 <div class="md:flex md:justify-between">
                     <div class="mb-6 md:mb-0">
                         <a href="./" class="flex items-center">
-                            <img src="assets/model-un-logo-white.png" class="h-8 mr-3" />
+                            <img src="../assets/model-un-logo-white.png" class="h-8 mr-3" />
                             <span
                                 class="self-center text-2xl font-semibold whitespace-nowrap font-serif text-white">MUNI
                                 XXVII</span>
@@ -203,7 +205,7 @@
             const sidenav = document.getElementById('sidenav');
             sidenav.style.right = '0'; // Show the sidenav
         }
-        
+
         function hideDiv() {
             const sidenav = document.getElementById('sidenav');
             sidenav.style.right = '-300px'; // Hide the sidenav
@@ -216,7 +218,7 @@
         }
 
         // Modify the link based on the device type
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const link = document.getElementById('google-maps-link');
             const googleMapsUrl = 'https://maps.app.goo.gl/X1kWbqSebLc76uqeA';
             const mobileUrl = 'google.navigation:q=X1kWbqSebLc76uqeA'; // This is for Android/iOS devices, opens Google Maps app.
@@ -250,11 +252,15 @@
     </script>
     <style>
         .custom-image {
-            width: 100%; /* Ensures the image takes the full width of the column */
+            width: 100%;
+            /* Ensures the image takes the full width of the column */
             height: 0;
-            padding-top: 66.67%; /* This sets the aspect ratio (625 / 940 = 0.6667) */
-            object-fit: cover; /* This will make the image cover the area without stretching */
+            padding-top: 66.67%;
+            /* This sets the aspect ratio (625 / 940 = 0.6667) */
+            object-fit: cover;
+            /* This will make the image cover the area without stretching */
         }
     </style>
 </body>
+
 </html>

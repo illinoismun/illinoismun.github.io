@@ -2,22 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUNI XXVII</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="stylesheet" href="dist/style.css">
-    <link rel="stylesheet" href="dist/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Illinois MUN</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="../dist/style.css" />
+    <link rel="stylesheet" href="../dist/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
@@ -25,160 +24,31 @@
 </head>
 
 <body>
-<script>
-            function showDiv() {
-                const sidenav = document.getElementById('sidenav');
-                sidenav.style.right = '0'; // Show the sidenav
-            }
-
-            function hideDiv() {
-                const sidenav = document.getElementById('sidenav');
-                sidenav.style.right = '-300px'; // Hide the sidenav
-            }
-        </script>
-        <script>
-            // Check if the user is on a mobile device
-            function isMobile() {
-                return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
-            }
-
-            // Modify the link based on the device type
-            document.addEventListener('DOMContentLoaded', function () {
-                const link = document.getElementById('google-maps-link');
-                const googleMapsUrl = 'https://maps.app.goo.gl/X1kWbqSebLc76uqeA';
-                const mobileUrl = 'google.navigation:q=X1kWbqSebLc76uqeA'; // This is for Android/iOS devices, opens Google Maps app.
-
-                if (isMobile()) {
-                    // For mobile devices, attempt to open the Google Maps app
-                    link.setAttribute('href', mobileUrl);
-                } else {
-                    // For desktop/laptop, keep the link to the web version
-                    link.setAttribute('href', googleMapsUrl);
-                }
-            });
-
-            // Function to toggle the submenu under "About"
-            function toggleSubmenu() {
-                var submenu = document.getElementById("about-submenu");
-                submenu.classList.toggle("hidden");
-            }
-            function toggleIMUNSubmenu() {
-                var submenu = document.getElementById("imun-submenu");
-                submenu.classList.toggle("hidden");
-            }
-            function toggleMUNISubmenu() {
-                var submenu = document.getElementById("muni-submenu");
-                submenu.classList.toggle("hidden");
-            }
-            function toggleSubmenu(submenuId) {
-                const submenu = document.getElementById(submenuId);
-                submenu.classList.toggle('hidden');
-            }
-        </script>
     <div class="relative">
-        <section
-            class="relative h-[100vh] flex top-0 shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
-            <video class="fixed brightness-75 w-full h-full object-cover" muted autoplay loop playsinline
-                disablepictureinpicture>
-                <source src="assets/hero.mp4" type="video/mp4" />
-            </video>
-            <h1 class="fixed text-5xl sm:text-6xl font-bold">MUNI XXVII</h1>
-            <h1 class="fixed text-xl sm:text-2xl mt-24 sm:mt-28">April 18-19th, 2025</h1>
-            <h1 id="countdown" class="text-xl bg-transparent text-white p-2 rounded-md border border-white "></h1>
-
-            <style>
-                #countdown {
-                    position: fixed;
-                    bottom: 150px;
-                    text-align: center;
-                    width: 25%;
-                }
-
-                @media (max-width: 768px) {
-                    #countdown {
-                        width: 45%;
-                    }
-                }
-            </style>
-
-            <svg fill="#ffffff" class="z-20 fixed animate-bounce bottom-10" height="5vh" version="1.1" id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
-                xml:space="preserve">
-                <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
-                    c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
-                    s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
-            </svg>
-
-        </section>
-        <script>
-            // Set the date we're counting down to
-            var countDownDate = new Date("April 18, 2025 16:00:00").getTime();
-
-            // Update the countdown every 1 second
-            var x = setInterval(function () {
-                // Get today's date and time
-                var now = new Date().getTime();
-
-                // Find the distance between now and the countdown date
-                var distance = countDownDate - now;
-
-                // Time calculations for days, hours, minutes, and seconds
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the result in the element with id="countdown"
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-                    + minutes + "m " + seconds + "s ";
-
-                // If the countdown is over, write some text
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "MUNI XXVII has begun!";
-                }
-            }, 1000);
-        </script>
-
-        <!---NAVBAR-->
         <!-- START NAVIGATION -->
-
         <div id="full-nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-5xl mx-auto px-6 md:px-12">
                 <div class="flex items-center container">
-                    <a href="./"><img id="logo-area" src="assets/model-un-logo-outline.png" alt="logo"
-                            style="float: left;" class="w-32"></a>
+                    <a href="./"><img id="logo-area" src="../assets/model-un-logo-outline.png" alt="logo"
+                            style="float: left;" class="w-32" /></a>
                     <div class="ml-auto sm:flex text-white font-sans hidden">
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                            <a class="title-link ml-8 font-semibold uppercase text-sm">Illinois MUN</a>
-                            <div class="dropdown-menu">
-                                <a class="subtitle-link" href="./clubschedule">Meeting Schedule</a>
-                                <a class="subtitle-link" href="./joinus">Join Us</a>
-                            </div>
+                            <a class="title-link ml-8 font-semibold uppercase text-sm" href="./"> Home</a>
                         </div>
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                            <a class="title-link ml-8 font-semibold uppercase text-sm">MUNI XXVII</a>
-                            <div class="dropdown-menu">
-                                <a class="subtitle-link" href="./about">Meet The Secretariat</a>
-                                <a class="subtitle-link" href="./committees">Committee Introduction</a>
-                                <a class="subtitle-link" href="./schedule">Conference Schedule</a>
-                                <a class="subtitle-link" href="./registration">Registration</a>
-                                <a class="subtitle-link" href="./logistics">Logistics</a>
-                            </div>
+                            <a class="title-link ml-8 font-semibold uppercase text-sm" href="./clubschedule">Club
+                                Schedule</a>
                         </div>
-                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                            <a class="title-link ml-8 font-semibold uppercase text-sm">Delegate Resources</a>
-                            <div class="dropdown-menu">
-                                <a class="subtitle-link" href="./ga">General Assemblies</a>
-                                <a class="subtitle-link" href="./crisis">Crisis Committees</a>
-                            </div>
-                        </div>
-                        <!-- <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                            <a class="title-link ml-8 font-semibold uppercase text-sm" href="./sponsor">Sponsorship</a>
 
-                        </div> -->
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm" href="./joinus">Join Us</a>
+                        </div>
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
                             <a class="title-link ml-8 font-semibold uppercase text-sm" href="./contact">Contact</a>
+                        </div>
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm"
+                                href="http://muni.illinoismun.org">MUNI</a>
                         </div>
                     </div>
                     <button id="tog" class="ml-auto md:hidden text-xl text-gray1 pr-5" onclick="showDiv()">
@@ -192,8 +62,9 @@
                 </div>
             </div>
         </div>
+
         <div id="sidenav" class="fixed top-0 bottom-0 w-72 p-6 z-50 bg-gray-900 shadow -right-80"
-            style="transition:all 0.5s ease">
+            style="transition: all 0.5s ease">
             <div class="flex">
                 <button class="text-xl text-gray-1 ml-auto" onclick="hideDiv()">
                     <svg stroke="#ffffff" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
@@ -204,211 +75,156 @@
                 </button>
             </div>
             <div class="flex flex-col justify-center items-end font-sans h-full text-white">
-                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
-                    onclick="toggleSubmenu('imun-submenu')">Illinois MUN</a>
-                <div id="imun-submenu" class="submenu hidden pl-4">
-                    <a class="font-semibold uppercase text-sm my-4" href="./schedule">Club Schedule</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./joinus">Join Us</a> 
-                </div>
-                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
-                    onclick="toggleSubmenu('muni-submenu')">MUNI XXVII</a>
-                <div id="muni-submenu" class="submenu hidden pl-4">
-                    <a class="font-semibold uppercase text-sm my-4" href="./about">Meet The Secretariat</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./committees">Committee Introduction</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./schedule">Conference Schedule</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./registration">Registration</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./logistics">Logistics</a>
-                </div>
-                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
-                    onclick="toggleSubmenu('delegate-resources')">Delegate Resources</a>
-                <div id="delegate-resources" class="submenu hidden pl-4">
-                    
-                    <a class="font-semibold uppercase text-sm my-4" href="./ga">General Assemblies</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./crisis">Crisis Committees</a>
-                </div>
+                <a class="font-semibold uppercase text-sm my-4" href="./">Home</a>
+                <a class="font-semibold uppercase text-sm my-4" href="./joinus">Join Us</a>
+                <a class="font-semibold uppercase text-sm my-4" href="./clubschedule">Club Schedule</a>
                 <a class="font-semibold uppercase text-sm my-4" href="./contact">Contact</a>
+                <a class="font-semibold uppercase text-sm my-4" href="http://muni.illinoismun.org">MUNI</a>
             </div>
         </div>
+        <section
+            class="relative flex min-h-screen h-[100vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
+            <video class="fixed brightness-50 w-full h-full object-cover" muted autoplay loop playsinline
+                disablepictureinpicture>
+                <source src="../assets/muni-group-video-2.mp4" type="video/mp4" />
+            </video>
+            <h1 class="fixed max-w-5xl text-5xl sm:text-6xl font-bold text-center leading-tight md:leading-snug">
+                We are Illinois MUN.</h1>
 
-        <!-- <section
-            class="relative flex h-[25vh] md:h-[40vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
-            <img class="fixed brightness-50 w-full  object-cover object-top h-fill" src="assets/quad.jpeg"></img>
-        </section> -->
-        <!-- END NAVIGATION -->
+
+            <svg fill="#ffffff" class="z-10 fixed animate-bounce bottom-10" height="5vh" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
+                xml:space="preserve">
+                <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+            c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+            s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
+            </svg>
+        </section>
+        <!-- VIDEO HERO -->
 
 
-        <script>
-            function showDiv() {
-                const sidenav = document.getElementById('sidenav');
-                sidenav.style.right = '0'; // Show the sidenav
-            }
+        <!-- ABOUT SECTION -->
+        <section class="w-full bg-gray-50 pt-8 md:pt-8 pb-24">
 
-            function hideDiv() {
-                const sidenav = document.getElementById('sidenav');
-                sidenav.style.right = '-300px'; // Hide the sidenav
-            }
-        </script>
-        <script>
-            // Check if the user is on a mobile device
-            function isMobile() {
-                return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
-            }
-
-            // Modify the link based on the device type
-            document.addEventListener('DOMContentLoaded', function () {
-                const link = document.getElementById('google-maps-link');
-                const googleMapsUrl = 'https://maps.app.goo.gl/X1kWbqSebLc76uqeA';
-                const mobileUrl = 'google.navigation:q=X1kWbqSebLc76uqeA'; // This is for Android/iOS devices, opens Google Maps app.
-
-                if (isMobile()) {
-                    // For mobile devices, attempt to open the Google Maps app
-                    link.setAttribute('href', mobileUrl);
-                } else {
-                    // For desktop/laptop, keep the link to the web version
-                    link.setAttribute('href', googleMapsUrl);
-                }
-            });
-
-            // Function to toggle the submenu under "About"
-            function toggleSubmenu() {
-                var submenu = document.getElementById("about-submenu");
-                submenu.classList.toggle("hidden");
-            }
-            function toggleIMUNSubmenu() {
-                var submenu = document.getElementById("imun-submenu");
-                submenu.classList.toggle("hidden");
-            }
-            function toggleMUNISubmenu() {
-                var submenu = document.getElementById("muni-submenu");
-                submenu.classList.toggle("hidden");
-            }
-            function toggleSubmenu(submenuId) {
-                const submenu = document.getElementById(submenuId);
-                submenu.classList.toggle('hidden');
-            }
-        </script>
-        <style>
-            .custom-image {
-                width: 100%;
-                /* Ensures the image takes the full width of the column */
-                height: 0;
-                padding-top: 66.67%;
-                /* This sets the aspect ratio (625 / 940 = 0.6667) */
-                object-fit: cover;
-                /* This will make the image cover the area without stretching */
-            }
-        </style>
-        <!---->
-
-        
-        <section id="main" class="w-full z-50 bg-white h-full">
-            
-            <div class="max-w-4xl px-16 md:px-0 mx-auto ">
-
-                <h1 class="pt-24 text-3xl font-serif font-bold flex items-center justify-center text-center">Welcome to
-                    Model United Nations at Illinois.</h1>
-                <div class="pt-20 pb-5">
-                    <span class="font-bold text-2xl italic">Letter from the Secretary-General</span>
+            <div class="max-w-5xl mx-auto px-6 md:px-12">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-800 mb-6 mt-10">About Illinois Model
+                        United
+                        Nations</h1>
+                    <p class="text-lg font-light text-gray-600 max-w-2xl mx-auto">
+                        Discover who we are, what we do, and how we shape tomorrow's global leaders.
+                    </p>
                 </div>
-                <div class="py-5">
-                    <!-- <h1 class="pt-24 text-1xl font-serif font-bold flex items-center">Letter from the Secretary-General.</h1> -->
-                    <img src="assets/headshots/nafisa.jpg"
-                        class="w-fit md:w-80 float-none md:float-left pb-10 md:pb-5 md:mr-10">
-                    <div class="leading-relaxed">
-                        It is with great pleasure that I welcome you to Model United Nations at the University of
-                        Illinois, Urbana-Champaign! This coming Spring 2025 marks our 27th annual MUNI conference for
-                        high schoolers, and we are once again thrilled to invite you all to take part in our in-person
-                        format on our historic campus.
-                        <br><br>
-                        MUNI XXVI, our most recent conference this past spring, was an incredible landmark for the
-                        Illinois MUN team: our former Secretary-General, Keon Sung, produced our second successful
-                        in-person event in five years. We are excited to build on this success to bring to you MUNI
-                        XXVII! I am so grateful to our amazing secretariat, general body members, and IMUN alumni for
-                        their hard work in making this conference come to life.
-                        <br><br>
-                        Designed for delegates of all experience levels, MUNI XXVII aims to both enhance the skills of
-                        beginner delegates while allowing more experienced competitors to bring their talents to the
-                        debate floor. We are committed to creating an immersive and, above all, supportive experience
-                        that will have every delegate leaving our closing ceremonies feeling more confident in their
-                        capabilities. With built-in feedback sessions and friendly faces behind every dias, we are eager
-                        to help delegates improve and build upon their strengths, no matter where they are in their MUN
-                        journey.
-                        <br><br>
-                        Our delegate’s experience- both inside and out of committee- is our top priority. Building on
-                        procedures executed during MUNI XXVI, we are continuing to expand our policies and practices to
-                        ensure that we have created an engaging and safe environment for all students. MUNI emphasizes a
-                        range of committee styles and topics to cater to interests of delegates coming from a variety of
-                        backgrounds. Delegates will be urged to think both critically and compassionately while working
-                        with diverse issues that have, and continue, to encapsulate the globe. In line with this
-                        philosophy, our conference holds delegates to be adaptable, collaborative, professional and
-                        respectful while interacting with their fellow committee members. Whether your delegation is
-                        returning or this is our first time hosting you, we can assure you that this conference will be
-                        a rewarding experience for all delegates.
-                        <br><br>
+                <hr class="my-12 border-gray-300 mb-10 mt-2" />
+                <div class="mt-16 space-y-12 md:space-y-0 md:grid md:grid-cols-2 md:gap-12">
+                    <!-- What is MUN -->
+                    <div class="p-10 rounded-2xl shadow-xl transition hover:shadow-2xl">
+                        <div class="flex items-center mb-6">
 
-                        We are so excited to see you all in Urbana-Champaign this April 18-19th for MUNI XXVII, and will
-                        be in touch throughout the year to keep you updated! For any questions or concerns, feel free to
-                        contact me directly at <a class="link"
-                            href="mailto:secgen@illinoismun.org">secgen@illinoismun.org</a>.
-                        <br><br>
-                        Sincerely,
-                        <br>
-                        <span class="font-bold">Nafisa Khan</span>
-                        <br>
-                        Secretary-General, MUNI XXVII
-                        <br>
-                        <a class="link" href="mailto:secgen@illinoismun.org">secgen@illinoismun.org</a>
-                        <br>
+                            <h2 class="ml-4 text-2xl font-serif font-semibold text-gray-800">What is Model UN?</h2>
+                        </div>
+                        <p class="text-base font-light text-gray-700 leading-relaxed">
+                            Model United Nations is a registered student organization at the University of Illinois in
+                            Urbana Champaign. Our club gives students the opportunity to learn about the purpose,
+                            structure and history of the United Nations. Students participating in Model United Nations
+                            will be able to debate intriguing international issues as well as to broaden their global
+                            perspective, all while gaining experience in negotiation, public speaking, research, and
+                            technical writing.
+                        </p>
                     </div>
 
+                    <!-- History -->
+                    <div class=" mt-10 p-10 rounded-2xl shadow-xl transition hover:shadow-2xl">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xl font-bold group-hover:bg-green-200">
+
+                            </div>
+                            <h2 class="ml-4 text-2xl font-serif font-semibold text-gray-800">History</h2>
+                        </div>
+                        <p class="text-base font-light text-gray-700 leading-relaxed">
+                            Model United Nations at the University of Illinois began in the 1980s as a way for students
+                            to take an active role in understanding the United Nations. The team traveled to conferences
+                            across the region to practice diplomacy and act as leaders in a rapidly globalizing world.
+                            In 1995, Illinois Model United Nations launched their annual high school Model UN
+                            conference, MUNI. </p>
+                    </div>
+
+                    <!-- Mission -->
+                    <div class="mt-10 p-10 rounded-2xl shadow-xl transition hover:shadow-2xl">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-12 h-12 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-xl font-bold group-hover:bg-purple-200">
+
+                            </div>
+                            <h2 class="ml-4 text-2xl font-serif font-semibold text-gray-800">Mission</h2>
+                        </div>
+                        <p class="text-base font-light text-gray-700 leading-relaxed">
+                            Today, the University of Illinois Model UN team attends 2 conferences per year, all while
+                            preparing for their upcoming 28th annual MUNI conference. Members have the unique
+                            opportunity to both run a high school conference and compete in top collegiate conferences
+                            across the country. Our goal is to provide our members with the opportunities to participate
+                            in United Nations simulations on the national circuit, utilizing their passion for world
+                            issues and strengthening skills in negotiation, research, persuasion, writing, and public
+                            speaking.
+                        </p>
+                    </div>
+
+                    <!-- Structure -->
+                    <div class="mt-10 p-10 rounded-2xl shadow-xl transition hover:shadow-2xl">
+                        <div class="flex items-center mb-6">
+
+                            <h2 class="ml-4 text-2xl font-serif font-semibold text-gray-800">Structure</h2>
+                        </div>
+                        <p class="text-base font-light text-gray-700 leading-relaxed">
+                            Model United Nations at the University of Illinois is governed by an executive board of six
+                            current students, each elected by popular vote of the membership. The President is the
+                            primary officer of
+                            the organization. Each member of the executive board has a unique role in setting strategy
+                            and daily operations of the organization. The executive board also has the authority to
+                            appoint directors to assist in strategic implementation. According to our organization's
+                            bylaws, active members must have attended meetings and contributed in some
+                            form to our high school conference, MUNI.
+                        </p>
+                    </div>
                 </div>
+
+                <!-- MUNI Callout -->
+                <div class="mt-20 p-10 rounded-2xl shadow-lg text-center">
+                    <h2 class="text-3xl font-serif font-bold text-gray-800 mb-4">MUNI Conference</h2>
+                    <p class="text-base font-light text-gray-700 max-w-3xl mx-auto mb-6">
+                        Each spring, Illinois MUN hosts over 100 high school students from across the nation for a 2-day
+                        conference simulating real-world global issues. Explore our flagship event.
+                    </p>
+                    <a href="http://muni.illinoismun.org" target="_blank"
+                        class="inline-block bg-gray-900 text-white px-6 py-3 rounded-xl text-sm uppercase tracking-wide hover:bg-gray-700 transition mb-10">
+                        Visit MUNI Website
+                    </a>
+                </div>
+                <!-- <div class="h-16 mt-10"></div> -->
             </div>
         </section>
-        <!-- START FOOTER -->
+
+        <!-- FOOTER -->
         <footer class="bg-gray-900">
-            <div class="mx-auto w-full max-w-5xl p-4 px-12 md:px-0 py-6 md:py-16">
+            <div class="mx-auto w-full max-w-5xl px-6 md:px-12 py-6 md:py-16">
                 <div class="md:flex md:justify-between">
                     <div class="mb-6 md:mb-0">
                         <a href="./" class="flex items-center">
-                            <img src="assets/model-un-logo-white.png" class="h-8 mr-3" />
+                            <img src="../assets/model-un-logo-white.png" class="h-8 mr-3" />
                             <span
-                                class="self-center text-2xl font-semibold whitespace-nowrap font-serif text-white">MUNI
-                                XXVII</span>
+                                class="self-center text-2xl font-semibold whitespace-nowrap font-serif text-white">Illinois
+                                MUN</span>
                         </a>
-                    </div>
-                    <div class="grid grid-cols-2 gap-8 sm:gap-6">
-                        <div>
-                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Resources</h2>
-                            <ul class="text-gray-400 font-medium">
-                                <li class="mb-4">
-                                    <a href="./about" class="link-foot">About</a>
-                                </li>
-                                <li>
-                                    <a href="./registration" class="link-foot">Registration</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact us</h2>
-                            <ul class="text-gray-400 font-medium">
-                                <li class="mb-4">
-                                    <a href="mailto:secgen@illinoismun.org" class="link-foot ">Sec-Gen</a>
-                                </li>
-                                <li>
-                                    <a href="mailto:logistics@illinoismun.org" class="link-foot">Logistics</a>
-                                </li>
-                            </ul>
-                        </div>
-
                     </div>
                 </div>
                 <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
                 <div class="sm:flex sm:items-center sm:justify-between">
-                    <span class="text-sm  sm:text-center text-gray-400">© 2025 <a href="./" class="link-foot">Illinois
-                            MUN</a>. All Rights Reserved.
-                    </span>
+                    <span class="text-sm sm:text-center text-gray-400">© 2025 <a href="./" class="link-foot">Illinois
+                            MUN</a>. All Rights Reserved.</span>
                     <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                         <a href="mailto:secgen@illinoismun.org" target="_blank" class="text-gray-500 hover:text-white">
+                            <!-- Email Icon -->
                             <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                 viewBox="0 0 512 512">
                                 <path
@@ -417,27 +233,27 @@
                         </a>
                         <a href="https://www.instagram.com/uiucmun/" target="_blank"
                             class="text-gray-500 hover:text-white">
+                            <!-- Instagram Icon -->
                             <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                 viewBox="0 0 448 512">
                                 <path
-                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8z" />
                             </svg>
                         </a>
-
                     </div>
                 </div>
             </div>
         </footer>
+
     </div>
+
+    <script src="//embed.typeform.com/next/embed.js"></script>
     <script>
         function showDiv() {
-            const sidenav = document.getElementById('sidenav');
-            sidenav.style.right = '0'; // Show the sidenav
+            document.getElementById('sidenav').style.right = '0';
         }
-
         function hideDiv() {
-            const sidenav = document.getElementById('sidenav');
-            sidenav.style.right = '-300px'; // Hide the sidenav
+            document.getElementById('sidenav').style.right = '-300px';
         }
     </script>
 </body>
