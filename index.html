@@ -5,12 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Illinois MUN</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
-    <link rel="stylesheet" href="../dist/style.css" />
-    <link rel="stylesheet" href="../dist/index.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <link rel="stylesheet" href="./dist/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
@@ -29,11 +29,15 @@
         <div id="full-nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear">
             <div class="max-w-5xl mx-auto px-6 md:px-12">
                 <div class="flex items-center container">
-                    <a href="./"><img id="logo-area" src="../assets/model-un-logo-outline.png" alt="logo"
+                    <a href="./"><img id="logo-area" src="./assets/model-un-logo-outline.png" alt="logo"
                             style="float: left;" class="w-32" /></a>
                     <div class="ml-auto sm:flex text-white font-sans hidden">
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
                             <a class="title-link ml-8 font-semibold uppercase text-sm" href="./"> Home</a>
+                        </div>
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm"
+                                href="http://muni.illinoismun.org">MUNI</a>
                         </div>
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
                             <a class="title-link ml-8 font-semibold uppercase text-sm" href="./clubschedule">Club
@@ -46,10 +50,7 @@
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
                             <a class="title-link ml-8 font-semibold uppercase text-sm" href="./contact">Contact</a>
                         </div>
-                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                            <a class="title-link ml-8 font-semibold uppercase text-sm"
-                                href="http://muni.illinoismun.org">MUNI</a>
-                        </div>
+
                     </div>
                     <button id="tog" class="ml-auto md:hidden text-xl text-gray1 pr-5" onclick="showDiv()">
                         <svg stroke="#ffffff" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
@@ -76,17 +77,17 @@
             </div>
             <div class="flex flex-col justify-center items-end font-sans h-full text-white">
                 <a class="font-semibold uppercase text-sm my-4" href="./">Home</a>
+                <a class="font-semibold uppercase text-sm my-4" href="http://muni.illinoismun.org">MUNI</a>
                 <a class="font-semibold uppercase text-sm my-4" href="./joinus">Join Us</a>
                 <a class="font-semibold uppercase text-sm my-4" href="./clubschedule">Club Schedule</a>
                 <a class="font-semibold uppercase text-sm my-4" href="./contact">Contact</a>
-                <a class="font-semibold uppercase text-sm my-4" href="http://muni.illinoismun.org">MUNI</a>
             </div>
         </div>
         <section
             class="relative flex min-h-screen h-[100vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
             <video class="fixed brightness-50 w-full h-full object-cover" muted autoplay loop playsinline
                 disablepictureinpicture>
-                <source src="../assets/muni-group-video-2.mp4" type="video/mp4" />
+                <source src="./assets/muni-group-video-2.mp4" type="video/mp4" />
             </video>
             <h1 class="fixed max-w-5xl text-5xl sm:text-6xl font-bold text-center leading-tight md:leading-snug">
                 We are Illinois MUN.</h1>
@@ -211,7 +212,7 @@
                 <div class="md:flex md:justify-between">
                     <div class="mb-6 md:mb-0">
                         <a href="./" class="flex items-center">
-                            <img src="../assets/model-un-logo-white.png" class="h-8 mr-3" />
+                            <img src="./assets/model-un-logo-white.png" class="h-8 mr-3" />
                             <span
                                 class="self-center text-2xl font-semibold whitespace-nowrap font-serif text-white">Illinois
                                 MUN</span>
@@ -221,7 +222,9 @@
                 <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
                 <div class="sm:flex sm:items-center sm:justify-between">
                     <span class="text-sm sm:text-center text-gray-400">© 2025 <a href="./" class="link-foot">Illinois
-                            MUN</a>. All Rights Reserved.</span>
+                            MUN</a>. All Rights Reserved. Illinois Model United Nations is a Registered Student Organization at the University of Illinois Urbana-Champaign and a 501(c)(3) non-profit organization.
+
+</span>
                     <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                         <a href="mailto:secgen@illinoismun.org" target="_blank" class="text-gray-500 hover:text-white">
                             <!-- Email Icon -->
